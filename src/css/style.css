@@ -77,7 +77,9 @@
    --bs-body-line-height: 1.5;
    --bs-body-color: #212529;
    --bs-body-color-rgb: 33, 37, 41;
-   --bs-body-bg: #fff;
+
+   --bs-body-bg: #FFFFFF;
+
    --bs-body-bg-rgb: 255, 255, 255;
    --bs-emphasis-color: #000;
    --bs-emphasis-color-rgb: 0, 0, 0;
@@ -123,14 +125,11 @@
 }
 
 /* container width override */
+.container{
+   --bs-gutter-x:2.5rem;
+}
 @media (min-width: 1400px) {
-
-   .container,
-   .container-lg,
-   .container-md,
-   .container-sm,
-   .container-xl,
-   .container-xxl {
+   .container{
       max-width: 1304px;
    }
 }
@@ -148,3 +147,13 @@
 }
 
 /* header part style end */
+/* main part style start */
+.main-container{
+   gap: 3.75rem;
+}
+/* order summmary part stylr start */
+.order-summary{
+   max-width: 26.937rem;
+}
+/* order summmary part stylr end */
+/* main part style end */
