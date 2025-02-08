@@ -201,7 +201,22 @@ h4,
    border-width: 2px;
    box-shadow: 0px 6px 12px rgba(51, 204, 216, 0.08);
 }
-
+.form-check-input {
+   --bs-border-color:#B0B0B8;
+   width:  1.25rem;
+   height: 1.25rem;
+   margin-top: 0;
+   background-size:  0.875rem 0.875rem;
+}
+.form-check-input:focus {
+   border-color: var(--bs-success);
+   box-shadow: none;
+}
+.form-check-input:checked{
+   background-color: var(--bs-white);
+   background-image: url(../images/Ellipse\ 2.svg);
+   border-color: var(--bs-success);
+}
 /* bootstrap override start*/
 /* main style start */
 /* header part style start */
@@ -296,6 +311,9 @@ h4,
 }
 .application .form2-item{
    padding: 0.875rem 0.75rem;
+}
+.application .form2-item:focus .form-check-input:checked{
+   --bs-form-check-bg-image:url(../images/Ellipse\ 2.svg);
 }
 /* Optional Add-ons */
 
