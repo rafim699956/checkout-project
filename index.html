@@ -85,14 +85,14 @@
    </header>
    <!-- header part end -->
    <!--man part start -->
-   <main class="position-relative overflow-x-hidden">
+   <main class="position-relative">
       <div class="container">
-         <div class="d-flex main-container">
+         <div class="main-container d-flex flex-wrap flex-lg-nowrap">
             <section class="checkout-form flex-grow-1">
                <!-- process -->
                <div class="process d-flex align-items-center justify-content-between">
                   <!-- process item -->
-                  <div class="process-item d-inline-flex align-items-center flex-column flex-lg-row">
+                  <div class="process-item d-inline-flex align-items-center flex-column flex-lg-row position-relative">
                      <div class="process-img d-flex align-items-center justify-content-center rounded-circle">
                         <img src="./src/images/process1.svg" alt="">
                      </div>
@@ -100,10 +100,8 @@
                         <p class="mb-0">1.Application</p>
                      </div>
                   </div>
-                  <!-- process item border-->
-                  <div class="process-item-border flex-grow-1"></div>
                   <!-- process item -->
-                  <div class="process-item d-inline-flex align-items-center flex-column flex-lg-row">
+                  <div class="process-item d-inline-flex align-items-center flex-column flex-lg-row position-relative">
                      <div class="process-img d-flex align-items-center justify-content-center rounded-circle">
                         <img src="./src/images/process1.svg" alt="">
                      </div>
@@ -111,10 +109,8 @@
                         <p class="mb-0">1.Application</p>
                      </div>
                   </div>
-                  <!-- process item border-->
-                  <div class="process-item-border flex-grow-1"></div>
                   <!-- process item -->
-                  <div class="process-item d-inline-flex align-items-center flex-column flex-lg-row">
+                  <div class="process-item d-inline-flex align-items-center flex-column flex-lg-row position-relative">
                      <div class="process-img d-flex align-items-center justify-content-center rounded-circle">
                         <img src="./src/images/process1.svg" alt="">
                      </div>
@@ -272,10 +268,49 @@
                <!-- application optional -->
             </section>
             <!-- order summary start -->
-            <section class="order-summary">
-               <div class="position-absolute h-100 w-100">
+            <section class="order-summary position-relative">
+               <div>
                   <div class="order-content">
                      <h2 class="border-bottom">Order Summary</h2>
+                     <div class="order-details d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div>
+                              <p>Recipient</p>
+                           </div>
+                           <span>Dev</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div>
+                              <p>New Passport Order</p>
+                           </div>
+                           <span>$0.00</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div>
+                              <p>Expedited Delivery</p>
+                              <span>7-9 business days</span>
+                           </div>
+                           <span>$355.00</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div>
+                              <p>Passport Card</p>
+                           </div>
+                           <span>$0.00</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div>
+                              <p>Subtotal</p>
+                           </div>
+                           <span>$0.00</span>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="d-flex align-items-center justify-content-between">
+                           <strong class="fw-bold">Total</strong>
+                           <strong class="fw-bold">$355.00</strong>
+                        </div>
+                     </div>
                   </div>
                </div>
             </section>

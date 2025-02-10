@@ -320,15 +320,16 @@ input[type=date]::-webkit-datetime-edit-year-field {
 }
 .process{
    --process-item-min-w:8.75rem;
+   --line-shape-gap:1.25rem;
 }
 .process .process-item{
    min-width: var(--process-item-min-w);
 }
 
 .process .process-img {
-   --size:2.25rem;
-   width: var(--size);
-   height: var(--size);
+   --icon-size:2.25rem;
+   width: var(--icon-size);
+   height: var(--icon-size);
    aspect-ratio: 1 / 1;
    background-color: #F7F7F7;
 }
@@ -339,6 +340,18 @@ input[type=date]::-webkit-datetime-edit-year-field {
 
 .process .process-item {
    gap: 0.375rem;
+}
+.process .process-item:not(:last-child)::after{
+   position: absolute;
+   content: "";
+   left: calc(var(--process-item-min-w) + var(--line-shape-gap));
+   top: 50%;
+   width: 100%;
+   max-width: 200px;
+   height: 4px;
+   border-radius: 6px;
+   background-color: red;
+   transform: translateY(-50%);
 }
 
 .process .process-item-border {
@@ -440,18 +453,29 @@ form .submit-btn {
 
 /* order summmary part stylr start */
 .order-summary {
-   max-width: 26.937rem;
    width: 100%;
 }
+/* .order-summary::after{
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: red;
+} */
 .order-summary div {
    background-color: #F8FAFC;
+   color: var(--bs-heading-color);
 }
-.order-summary .order-content{
-   max-width: 26.937rem;
-   width: 100%;
+.order-summary .order-details {
+   gap: 1.25rem;
 }
-
-.order-summary .order-content *{
+.order-details div p + span{
+   font-size: 0.875rem;
+   line-height: 1.213rem;
+}
+.order-summary .order-content > *{
    padding-top: 30px;
    padding-bottom: 1.5rem;
    padding-inline:1.5rem;
@@ -474,10 +498,16 @@ form .submit-btn {
    /* checkout form part */
    .checkout-form {
       padding-top: 5rem;
+      width: 63.84%;
    }
 
    /* application form */
    .checkout-form form>div:not(:last-child) {
       padding: 1.875rem;
+   }
+
+   /* order summery */
+   .order-summary {
+      width: 32.67%;
    }
 }
