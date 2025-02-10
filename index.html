@@ -85,7 +85,7 @@
    </header>
    <!-- header part end -->
    <!--man part start -->
-   <main>
+   <main class="position-relative overflow-x-hidden">
       <div class="container">
          <div class="d-flex main-container">
             <section class="checkout-form flex-grow-1">
@@ -124,136 +124,162 @@
                   </div>
                </div>
                <!-- application -->
-               <form action="" class="application border rounded-2">
-                  <!-- application header-->
-                  <div class="application-title">
-                     <h1 class="mb-0">Applicant Info</h1>
-                  </div>
-                  <!-- application input form -->
-                  <div>
-                     <div class="row gx-3 gx-3 gy-5">
-                        <div class="col-lg-6">
-                           <input type="text" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="col-lg-6">
-                           <input type="text" class="form-control" placeholder="Last Name">
-                        </div>
-                        <div class="col-lg-6">
-                           <input type="datetime-local" class="form-control" placeholder="Date of Birth">
-                        </div>
-                        <div class="col-lg-6">
-                           <input type="email" class="form-control" placeholder="Email Address">
+               <form action="">
+                  <div class="application border rounded-2">
+                     <!-- application header-->
+                     <div class="application-title">
+                        <h1 class="mb-0">Applicant Info</h1>
+                     </div>
+                     <!-- application input form -->
+                     <div>
+                        <div class="row gx-3 gx-3 gy-5">
+                           <div class="col-lg-6">
+                              <div class="position-relative input-item">
+                                 <label for="firstName" class="form-label position-absolute">First Name</label>
+                                 <input id="firstName" type="text" class="form-control">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="position-relative input-item">
+                                 <label for="lastName" class="form-label position-absolute">Last Name</label>
+                                 <input id="lastName" type="text" class="form-control">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="position-relative input-item">
+                                 <label for="dateOfBirth" class="form-label position-absolute">Date of Birth</label>
+                                 <input id="dateOfBirth" type="date" class="form-control">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="position-relative input-item">
+                                 <label for="emailAddress" class="form-label position-absolute">Email
+                                    Address</label>
+                                 <input id="emailAddress" type="email" class="form-control">
+                              </div>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <!-- application form 2 -->
-                  <div class="form2">
-                     <h2>How quickly do you need your passport?</h2>
-                     <div class="d-flex flex-column gap-3">
-                        <!-- item -->
-                        <label for="Priority_Delivery"
-                           class="form2-item border rounded d-flex align-items-center justify-content-between bg-white"
-                           type="button">
-                           <div class="d-inline-flex align-items-center gap-3">
-                              <input class="form-check-input" type="radio" name="delivery" id="Priority_Delivery">
-                              <div class="delivary-name-and-time">
-                                 <h3 class="mb-0">Priority Delivery</h3>
-                                 <span>6 weeks</span>
+                     <!-- application form 2 -->
+                     <div class="form2">
+                        <h2>How quickly do you need your passport?</h2>
+                        <div class="d-flex flex-column gap-3">
+                           <!-- item -->
+                           <label for="Priority_Delivery"
+                              class="form2-item border d-flex align-items-center justify-content-between bg-white"
+                              type="button">
+                              <div class="d-inline-flex align-items-center gap-3">
+                                 <input class="form-check-input" type="radio" name="delivery" id="Priority_Delivery">
+                                 <div class="delivary-name-and-time">
+                                    <h3 class="mb-0">Priority Delivery</h3>
+                                    <span>6 weeks</span>
+                                 </div>
                               </div>
-                           </div>
-                           <div>
-                              <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
-                           </div>
-                        </label>
-                        <!-- item -->
-                        <label for="Express_Delivery"
-                           class="form2-item border rounded d-flex align-items-center justify-content-between bg-white"
-                           type="button">
-                           <div class="d-inline-flex align-items-center gap-3">
-                              <input class="form-check-input" type="radio" name="delivery" id="Express_Delivery">
-                              <div class="delivary-name-and-time">
-                                 <h3 class="mb-0">Express Delivery</h3>
-                                 <span>6 weeks</span>
+                              <div>
+                                 <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
                               </div>
-                           </div>
-                           <div>
-                              <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
-                           </div>
-                        </label>
-                        <!-- item -->
-                        <label for="Expedited_Delivery"
-                           class="form2-item border rounded d-flex align-items-center justify-content-between bg-white"
-                           type="button">
-                           <div class="d-inline-flex align-items-center gap-3">
-                              <input class="form-check-input" type="radio" name="delivery" id="Expedited_Delivery">
-                              <div class="delivary-name-and-time">
-                                 <h3 class="mb-0">Expedited Delivery</h3>
-                                 <span>6 weeks</span>
+                           </label>
+                           <!-- item -->
+                           <label for="Express_Delivery"
+                              class="form2-item border d-flex align-items-center justify-content-between bg-white"
+                              type="button">
+                              <div class="d-inline-flex align-items-center gap-3">
+                                 <input class="form-check-input" type="radio" name="delivery" id="Express_Delivery">
+                                 <div class="delivary-name-and-time">
+                                    <h3 class="mb-0">Express Delivery</h3>
+                                    <span>6 weeks</span>
+                                 </div>
                               </div>
-                           </div>
-                           <div>
-                              <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
-                           </div>
-                        </label>
-                        <!-- item -->
-                        <label for="Emergency_Delivery"
-                           class="form2-item border rounded d-flex align-items-center justify-content-between bg-white"
-                           type="button">
-                           <div class="d-inline-flex align-items-center gap-3">
-                              <input class="form-check-input" type="radio" name="delivery" id="Emergency_Delivery">
-                              <div class="delivary-name-and-time">
-                                 <h3 class="mb-0">Emergency Delivery</h3>
-                                 <span>6 weeks</span>
+                              <div>
+                                 <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
                               </div>
-                           </div>
-                           <div>
-                              <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
-                           </div>
-                        </label>
+                           </label>
+                           <!-- item -->
+                           <label for="Expedited_Delivery"
+                              class="form2-item border d-flex align-items-center justify-content-between bg-white"
+                              type="button">
+                              <div class="d-inline-flex align-items-center gap-3">
+                                 <input class="form-check-input" type="radio" name="delivery" id="Expedited_Delivery">
+                                 <div class="delivary-name-and-time">
+                                    <h3 class="mb-0">Expedited Delivery</h3>
+                                    <span>6 weeks</span>
+                                 </div>
+                              </div>
+                              <div>
+                                 <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
+                              </div>
+                           </label>
+                           <!-- item -->
+                           <label for="Emergency_Delivery"
+                              class="form2-item border d-flex align-items-center justify-content-between bg-white"
+                              type="button">
+                              <div class="d-inline-flex align-items-center gap-3">
+                                 <input class="form-check-input" type="radio" name="delivery" id="Emergency_Delivery">
+                                 <div class="delivary-name-and-time">
+                                    <h3 class="mb-0">Emergency Delivery</h3>
+                                    <span>6 weeks</span>
+                                 </div>
+                              </div>
+                              <div>
+                                 <p class="d-flex align-items-center gap-2"><span>$139</span>$115</p>
+                              </div>
+                           </label>
+                        </div>
+                        <p class="mb-0 mt-3 pt-1">Government fee of $211.36 is not included.</p>
                      </div>
-                     <p class="mb-0">Government fee of $211.36 is not included.</p>
-                  </div>
-                  <div>
-                     <h2>Optional Add-ons</h2>
-                     <div class="row">
-                        <div class="col-lg-6">
-                           <div class="border rounded p-3">
-                              <div class="p-1">
-                                 <h3>Lost, stolen, or damaged passport? </h3>
-                                 <p>We’ll expedite a replacement! Covers expedited service fees only; excludes photos,
-                                    shipping, and government fees.</p>
-                                 <hr>
-                                 <div class="d-flex align-items-center justify-content-between">
-                                    <p>$20.00</p>
-                                    <button type="button">Add</button>
+                     <div class="optional-add">
+                        <h2>Optional Add-ons</h2>
+                        <div class="row">
+                           <div class="col-lg-6">
+                              <div class="optional-add-item rounded p-3">
+                                 <div class="p-1">
+                                    <h3 class="mb-2">Lost, stolen, or damaged passport? </h3>
+                                    <p class="pt-1">We’ll expedite a replacement! Covers expedited service fees only;
+                                       excludes photos,
+                                       shipping, and government fees.</p>
+                                    <hr>
+                                    <div class="add-item d-flex align-items-center justify-content-between">
+                                       <p>$20.00</p>
+                                       <button class="rounded-4 border" type="button">Add</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="optional-add-item rounded p-3">
+                                 <div class="p-1">
+                                    <h3 class="mb-2">Lost, stolen, or damaged passport? </h3>
+                                    <p class="pt-1">We’ll expedite a replacement! Covers expedited service fees only;
+                                       excludes photos,
+                                       shipping, and government fees.</p>
+                                    <hr>
+                                    <div class="add-item d-flex align-items-center justify-content-between">
+                                       <p>$20.00</p>
+                                       <button class="rounded-4 border" type="button">Add</button>
+                                    </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="col-lg-6">
-                           <div class="border rounded p-3">
-                              <div class="p-1">
-                                 <h3>Lost, stolen, or damaged passport? </h3>
-                                 <p>We’ll expedite a replacement! Covers expedited service fees only; excludes photos,
-                                    shipping, and government fees.</p>
-                                 <hr>
-                                 <div class="d-flex align-items-center justify-content-between">
-                                    <p>$20.00</p>
-                                    <button type="button">Add</button>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
                      </div>
+                  </div>
+                  <div class="text-center">
+                     <button class="submit-btn rounded-4 py-3 border-0 text-white h2" type="submit">Continue to
+                        Delivery
+                        Address</button>
                   </div>
                </form>
                <!-- application optional -->
             </section>
-            <section class=" order-summary">
-               <div>
-                  <h2>Order Summary</h2>
+            <!-- order summary start -->
+            <section class="order-summary">
+               <div class="position-absolute h-100 w-100">
+                  <div class="order-content">
+                     <h2 class="border-bottom">Order Summary</h2>
+                  </div>
                </div>
             </section>
+            <!-- order summary end -->
          </div>
       </div>
    </main>
