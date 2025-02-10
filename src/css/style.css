@@ -320,7 +320,7 @@ input[type=date]::-webkit-datetime-edit-year-field {
 }
 .process{
    --process-item-min-w:8.75rem;
-   --line-shape-gap:1.25rem;
+   --line-shape-gap:clamp(0.4375rem, 0.1733rem + 1.3211vw, 1.25rem);
    --icon-size:2.25rem;
 }
 .process .process-item{
@@ -344,10 +344,9 @@ input[type=date]::-webkit-datetime-edit-year-field {
 .process .process-item .process-img:not(.process .process-item:last-child .process-img)::after{
    position: absolute;
    content: "";
-   left: calc(var(--process-item-min-w) + var(--line-shape-gap));
+   left: calc(var(--icon-size) + var(--line-shape-gap));
    top: 50%;
-   width: 100%;
-   max-width: 200px;
+   width: clamp(4.5rem, 3.5447rem + 4.7764vw, 7.4375rem);
    height: 4px;
    border-radius: 6px;
    background-color: red;
@@ -509,5 +508,8 @@ form .submit-btn {
    /* order summery */
    .order-summary {
       width: 32.67%;
+   }
+   .process .process-item .process-img:not(.process .process-item:last-child .process-img)::after{
+      left: calc(var(--process-item-min-w) + var(--line-shape-gap));     
    }
 }
